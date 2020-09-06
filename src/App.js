@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import moment from 'moment';
 //import Greeting from './components/Greeting';
 import UserList from './components/UserList';
@@ -11,6 +11,10 @@ import Slider from './components/Slider/Slider';
 import Carousel from './components/Carousel/Carousel';
 import { slidesCollection } from './components/Carousel/config/config';
 import UserLoader from './components/UserLoader/UserLoader';
+import Counter from './components/Counter/Counter.jsx';
+import Chat from './components/Chat/Chat.jsx';
+import TimerHook from './components/Timer/TimerHook';
+import PageUsers from './components/UserLoader/Pagination/Pagination';
 
 // const dbData = [
 //   {
@@ -69,6 +73,7 @@ export default App;
 */
 
 const App = () => {
+  const [currentPage] = useState(1);
   return (
     <>
       <Greeting name={'React'} />
@@ -79,7 +84,11 @@ const App = () => {
 
       {/* <Carousel width={800} height={400} slides={slidesCollection} /> */}
 
-      <UserLoader />
+      {/* <UserLoader /> */}
+      {/* <Counter />
+      <Chat />
+      <TimerHook /> */}
+      <PageUsers currentPage={currentPage} />
     </>
   );
 };
