@@ -15,6 +15,7 @@ import Counter from './components/Counter/Counter.jsx';
 import Chat from './components/Chat/Chat.jsx';
 import TimerHook from './components/Timer/TimerHook';
 import PageUsers from './components/UserLoader/Pagination/Pagination';
+import Card from './components/TaskCard/Card';
 
 // const dbData = [
 //   {
@@ -88,7 +89,8 @@ const App = () => {
       {/* <Counter />
       <Chat />
       <TimerHook /> */}
-      <PageUsers currentPage={currentPage} />
+      {/* <PageUsers currentPage={currentPage} /> */}
+      <Card />
     </>
   );
 };
